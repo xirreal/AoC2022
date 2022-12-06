@@ -38,10 +38,10 @@ void main() {
     }
 
     if(!hasDuplicate1) {
-        imageAtomicMin(colorimg5, ivec2(gl_GlobalInvocationID.x, 0), gl_GlobalInvocationID.x + 4);
+        imageAtomicMin(colorimg5, ivec2(0, 0), gl_GlobalInvocationID.x + 4);
     }
 
     if(!hasDuplicate2) {
-        imageAtomicMin(colorimg5, ivec2(gl_GlobalInvocationID.x, 1), gl_GlobalInvocationID.x + 14);
+        imageAtomicMin(colorimg5, ivec2(1, 0), gl_GlobalInvocationID.x + 14);
     }
 }
