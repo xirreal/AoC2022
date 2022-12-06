@@ -3,8 +3,8 @@
 #include "textRendering.glsl"
 
 /*
-const int colortex4Format = R32UI
-const int colortex5Format = R32UI
+const int colortex4Format = R32UI;
+const int colortex5Format = R32UI;
 */
 
 in vec2 texcoord;

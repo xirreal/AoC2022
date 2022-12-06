@@ -8,7 +8,7 @@
 in binary, which is 1073741824 as an uint.
 
 const vec4 colortex5ClearColor = vec4(2, 0, 0, 0);
-const int colortex5Format = R32UI
+const int colortex5Format = R32UI;
 */
 
 in vec2 texcoord;
