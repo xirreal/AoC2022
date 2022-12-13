@@ -46,17 +46,7 @@ let packets = pairs.flatMap((x) => x.trim().split("\n").map(JSON.parse));
 packets.push([[2]]);
 packets.push([[6]]);
 
-let sorted = false;
-while (!sorted) {
-  sorted = true;
-  for (let i = 0; i < packets.length - 1; i++) {
-    if (!compare(packets[i], packets[i + 1])) {
-      [packets[i], packets[i + 1]] = [packets[i + 1], packets[i]];
-      sorted = false;
-      break;
-    }
-  }
-}
+packets = packets.sort((a, b) => (compare(a, b) ? -1 : 1));
 
 let strings = packets.map((x) => JSON.stringify(x));
 console.log((strings.indexOf("[[2]]") + 1) * (strings.indexOf("[[6]]") + 1));
